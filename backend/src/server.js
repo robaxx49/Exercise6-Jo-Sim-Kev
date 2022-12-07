@@ -44,8 +44,7 @@ app.listen(8000, () => {
     console.log('Server started on port 8000');
 });
 
-
-// ******************** ajout de tous les données dans la base de données ********************
+// ******************** ajout de toutes les données dans la base de données ********************
 // app.post('/api/repertoire', async (req, res) => {
 //     utiliserDB(async (db) => {
 //         await db.collection('repertoire').insertMany(repertoire);
@@ -71,9 +70,10 @@ app.get('/api/pieces/:id', async (req, res) => {
     const id = req.params.id;
 
     utiliserDB(async (db) => {
-        const repertoire = await db.collection('repertoire').findOne({ _id: ObjectId(id) })
-        if (repertoire !== null) {
-            res.status(200).send(`Utilisateur trouvé: ${repertoire.titre} ${repertoire.artiste} ${repertoire.categorie}`);
+        const piece = await db.collection('repertoire').findOne({ _id: ObjectId(id) })
+        if (piece !== null) {
+            res.status(200).send(piece);
+            // res.status(200).send(`Utilisateur trouvé: ${repertoire.titre} ${repertoire.artiste} ${repertoire.categorie} ${repertoire._id}`);
         } else {
             res.status(404).send(`id inexistant : ${id}`);
         }
@@ -82,15 +82,15 @@ app.get('/api/pieces/:id', async (req, res) => {
 
 //add a piece
 app.post('/api/pieces/ajouter', async (req, res) => {
-    const repertoireBody = req.body;
+    const piece = req.body;
 
-    if (repertoire !== null) {
+    if (piece !== null) {
         utiliserDB(async (db) => {
-            const repertoire = await db.collection('repertoire').insertOne(repertoireBody);
-            res.status(200).send(`La pièce ${repertoireBody.titre} a été ajoutée`);
+            const repertoire = await db.collection('repertoire').insertOne(piece);
+            res.status(200).send(`La pièce ${piece.titre} a été ajoutée`);
         }, res);
     } else {
-        res.status(404).send(`La pièce ${repertoireBody.titre} n'a pas été ajoutée`);
+        res.status(404).send(`La pièce ${piece.titre} n'a pas été ajoutée`);
     }
 });
 
@@ -100,9 +100,9 @@ app.delete('/api/pieces/:id/supprimer', async (req, res) => {
 
     if (id !== null) {
         utiliserDB(async (db) => {
-            const repertoire = await db.collection('repertoire').findOne({ _id: ObjectId(req.params.id) });
-            if (repertoire !== null) {
-                await db.collection('repertoire').deleteOne({ _id: ObjectId(req.params.id) });
+            const piece = await db.collection('repertoire').findOne({ _id: ObjectId(id) });
+            if (piece !== null) {
+                await db.collection('repertoire').deleteOne({ _id: ObjectId(id) });
                 res.status(200).send(`La pièce ${id} a été supprimée`);
             } else {
                 res.status(404).send(`La pièce ${id} n'a pas été supprimée`);
@@ -116,13 +116,13 @@ app.delete('/api/pieces/:id/supprimer', async (req, res) => {
 //update a piece
 app.put('/api/pieces/:id', async (req, res) => {
     const id = req.params.id;
-    const repertoire = req.body;
+    const piece = req.body;
 
-    if (id !== null && repertoire !== null) {
+    if (id !== null && piece !== null) {
         utiliserDB(async (db) => {
-            const repertoire = await db.collection('repertoire').findOne({ _id: ObjectId(id) });
-            if (repertoire !== null) {
-                await db.collection('repertoire').updateOne({ _id: ObjectId(id) }, { $set: repertoire });
+            const piece = await db.collection('repertoire').findOne({ _id: ObjectId(id) });
+            if (piece !== null) {
+                await db.collection('repertoire').updateOne({ _id: ObjectId(id) }, { $set: piece });
                 res.status(200).send(`La pièce ${id} a été mise à jour`);
             } else {
                 res.status(404).send(`La pièce ${id} n'a pas été mise à jour, données manquantes`);
