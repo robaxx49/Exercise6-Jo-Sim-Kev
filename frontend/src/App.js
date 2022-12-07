@@ -11,6 +11,7 @@ import { PageAdministration } from './pages/pageAdministration';
 import { PageAjouter } from './pages/pageAjouter';
 import { PageModifier } from './pages/pageModifier';
 import { PageRepertoire } from './pages/pageRepertoire';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

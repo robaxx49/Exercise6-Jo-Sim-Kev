@@ -1,5 +1,6 @@
 import React from 'react';
 import formulairePieces from '../formulairePiece';
+import { Button } from 'react-bootstrap';
 
 export const PageModifier = ({pieceAModifier}) =>{
     return(

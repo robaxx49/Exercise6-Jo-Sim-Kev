@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Table } from "react-bootstrap";
 
 export function listagePieces({ isAdmin }) {
     let boutonModifier = null;
@@ -28,7 +28,8 @@ export function listagePieces({ isAdmin }) {
                                 <td>{u.titre}</td>
                                 <td>{u.artiste}</td>
                                 <td>{u.categorie}</td>
-                                <td>{boutonAdmin}</td>
+                                <td>{boutonModifier}</td>
+                                <td>{boutonEffacer}</td>
                             </tr>
                         )};
                     </tbody>
