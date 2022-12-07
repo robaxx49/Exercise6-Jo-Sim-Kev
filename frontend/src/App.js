@@ -18,11 +18,11 @@ function App() {
       <Container>
         <BarreNavigation />
         <Routes>
-          <Route path='/' element={<PageAccueil />}/>
-          <Route path='/admin' element={<PageAdministration />}/>
-          <Route path='/ajout' element={<PageAjouter />}/>
-          <Route path='/modifier' element={<PageModifier />}/>
-          <Route path='/repertoire' element={<PageRepertoire />}/>
+          <Route path='/' element={<PageAccueil />} />
+          <Route path='/admin' element={<PageAdministration />} />
+          <Route path='/ajout' element={<PageAjouter />} />
+          <Route path='/modifier' element={<PageModifier />} />
+          <Route path='/repertoire' element={<PageRepertoire />} />
         </Routes>
       </Container>
     </BrowserRouter>
