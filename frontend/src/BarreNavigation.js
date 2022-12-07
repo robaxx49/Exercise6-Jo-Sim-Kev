@@ -6,7 +6,7 @@ import Image from './image/logo.svg'
 
 
 export const BarreNavigation = () => {
-    return(
+  return(
     <Navbar bg="primary" variant="dark">
         <Container>
           <Navbar.Brand href="/"> <img
@@ -28,6 +28,19 @@ export const BarreNavigation = () => {
             <Nav.Link href="/admin">Admin</Nav.Link>
           </Nav>
         </Container>
+      <Container>
+        <Navbar.Brand href="/">Repertoire Musicale</Navbar.Brand>
+        <Nav className="me-auto">
+          <Nav.Link href="/">Accueil</Nav.Link>
+          <Nav.Link href="/ajout">Ajout</Nav.Link>
+          <Nav.Link href="/modifier">Modifier</Nav.Link>
+          <Nav.Link href="/repertoire">Repertoire</Nav.Link>
+
+        </Nav>
+        <Nav>
+          <Nav.Link href="/admin">Admin</Nav.Link>
+        </Nav>
+      </Container>
     </Navbar>
-    )
+  )
 }
