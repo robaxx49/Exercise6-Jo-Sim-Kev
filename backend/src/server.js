@@ -46,12 +46,12 @@ app.listen(8000, () => {
 
 
 // ******************** ajout de tous les données dans la base de données ********************
-app.post('/api/repertoire', async (req, res) => {
-    utiliserDB(async (db) => {
-        await db.collection('repertoire').insertMany(repertoire);
-        res.status(200).send();
-    }, res);
-});
+// app.post('/api/repertoire', async (req, res) => {
+//     utiliserDB(async (db) => {
+//         await db.collection('repertoire').insertMany(repertoire);
+//         res.status(200).send();
+//     }, res);
+// });
 
 //return all data
 app.get('/api/pieces', async (req, res) => {

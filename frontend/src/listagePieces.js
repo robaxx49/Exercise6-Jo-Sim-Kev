@@ -1,16 +1,14 @@
 import React from "react";
-import {Row, Col, Button} from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
-export function listagePieces({listePieces, isAdmin})
-{
+export function listagePieces({ listePieces, isAdmin }) {
     let boutonAdmin = null;
 
-    if (isAdmin)
-    {
+    if (isAdmin) {
         boutonAdmin = <Bouton>Modifier</Bouton>;
     }
 
-    return(
+    return (
         <Row>
             <Col>
                 <Table bordered striped>
