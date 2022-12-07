@@ -6,11 +6,11 @@ import {
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BarreNavigation } from './BarreNavigation';
-import { pageAccueil } from './pages/pageAccueil';
-import { pageAdministration } from './pages/pageAdministration';
-import { pageAjouter } from './pages/pageAjouter';
-import { pageModifier } from './pages/pageModifier';
-import { pageRepertoire } from './pages/pageRepertoire';
+import { PageAccueil } from './pages/pageAccueil';
+import { PageAdministration } from './pages/pageAdministration';
+import { PageAjouter } from './pages/pageAjouter';
+import { PageModifier } from './pages/pageModifier';
+import { PageRepertoire } from './pages/pageRepertoire';
 
 function App() {
   return (
@@ -18,11 +18,11 @@ function App() {
       <Container>
         <BarreNavigation />
         <Routes>
-          <Route path='/' element={<pageAcceuil />}/>
-          <Route path='/admin' element={<pageAdministration />}/>
-          <Route path='/ajout' element={<pageAjouter />}/>
-          <Route path='/modifier' element={<pageModifier />}/>
-          <Route path='/repertoire' element={<pageRepertoire />}/>
+          <Route path='/' element={<PageAccueil />}/>
+          <Route path='/admin' element={<PageAdministration />}/>
+          <Route path='/ajout' element={<PageAjouter />}/>
+          <Route path='/modifier' element={<PageModifier />}/>
+          <Route path='/repertoire' element={<PageRepertoire />}/>
         </Routes>
       </Container>
     </BrowserRouter>
