@@ -40,10 +40,6 @@ const utiliserDB = async (operations, res) => {
     }
 }
 
-app.listen(8000, () => {
-    console.log('Server started on port 8000');
-});
-
 // ******************** ajout de toutes les données dans la base de données ********************
 // app.post('/api/repertoire', async (req, res) => {
 //     utiliserDB(async (db) => {
@@ -53,6 +49,7 @@ app.listen(8000, () => {
 // });
 
 //return all data
+
 app.get('/api/pieces', async (req, res) => {
 
     utiliserDB(async (db) => {
@@ -97,7 +94,7 @@ app.post('/api/pieces/ajouter', async (req, res) => {
 //delete a piece
 app.delete('/api/pieces/supprimer/:id', async (req, res) => {
     const id = req.params.id;
-    
+
     if (id !== null) {
         utiliserDB(async (db) => {
             const piece = await db.collection('repertoire').findOne({ "_id": ObjectId(id) });
@@ -116,7 +113,7 @@ app.delete('/api/pieces/supprimer/:id', async (req, res) => {
 //update a piece
 app.put('/api/pieces/modifier/:id', async (req, res) => {
     const id = req.params.id;
-    const piece = req.body;    
+    const piece = req.body;
 
     if (id !== null && piece.titre !== null || piece.artiste !== null || piece.categorie !== null) {
         utiliserDB(async (db) => {
@@ -131,4 +128,9 @@ app.put('/api/pieces/modifier/:id', async (req, res) => {
     } else {
         res.status(404).send(`La pièce n'a pas été mise à jour, id : ${id} ou piece inexistant`);
     }
+});
+
+
+app.listen(8000, () => {
+    console.log('Server started on port 8000');
 });
