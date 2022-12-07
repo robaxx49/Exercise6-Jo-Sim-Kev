@@ -2,11 +2,18 @@ import React from "react";
 import {Row, Col} from "react-bootstrap";
 import Form from "react-bootstrap";
 
-export function formulairePieces() 
+export function formulairePieces({pieceAModifier}) 
 {
     const [titre, setTitre] = useState("");
     const [artiste, setArtiste] = useState("");
     const [categorie, setCategorie] = useState("");
+
+    if(pieceAModifier !== undefined)
+    {
+        setTitre(pieceAModifier.titre);
+        setArtiste(pieceAModifier.artiste);
+        setCategorie(pieceAModifier.categorie);
+    }
 
     return (
         <Row>
