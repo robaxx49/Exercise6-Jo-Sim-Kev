@@ -1,11 +1,13 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
 
-export function listagePieces({ listePieces, isAdmin }) {
-    let boutonAdmin = null;
+export function listagePieces({ isAdmin }) {
+    let boutonModifier = null;
+    let boutonEffacer = null;
 
     if (isAdmin) {
-        boutonAdmin = <Button>Modifier</Button>;
+        boutonModifier = <Button>Modifier</Button>;
+        boutonEffacer = <Button>Effacer</Button>
     }
 
     return (
