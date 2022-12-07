@@ -8,7 +8,7 @@ export const BarreNavigation = () => {
     return(
     <Navbar bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Repertoire Musicale</Navbar.Brand>
+          <Navbar.Brand href="/">Repertoire Musicale</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Accueil</Nav.Link>
             <Nav.Link href="/ajout">Ajout</Nav.Link>
