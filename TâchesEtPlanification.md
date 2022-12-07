@@ -1,4 +1,4 @@
-### Structure front-end
+## Structure front-end
 
 - Page d'acceuil
 - Barre de navigation
@@ -13,7 +13,7 @@
         - Formulaire d'infos (pour ajout/modification)
             - Validation
 
-#### Liste de composants
+### Liste de composants
 
 - Page acceuil
 - Page répertoire
@@ -34,7 +34,7 @@
 - Composant formulaire
     - Champs titre, artiste, catégorie
 
-### Structure Back-end
+## Structure Back-end
 
 - Mise en place de la base de données
     - Création nom DB
