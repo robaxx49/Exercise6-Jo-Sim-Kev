@@ -1,8 +1,10 @@
 import React from "react";
 import {Row, Col} from "react-bootstrap";
-import Form from "react-bootstrap";
+import { Form } from "react-bootstrap";
+import { useState } from "react";
 
-export function formulairePieces({pieceAModifier}) 
+
+export function FormulairePieces({pieceAModifier}) 
 {
     const [titre, setTitre] = useState("");
     const [artiste, setArtiste] = useState("");
@@ -51,4 +53,4 @@ export function formulairePieces({pieceAModifier})
     )
 }
 
-export default formulairePieces;
+export default FormulairePieces;
