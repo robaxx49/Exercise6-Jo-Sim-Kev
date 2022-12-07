@@ -5,7 +5,7 @@ export function listagePieces({ listePieces, isAdmin }) {
     let boutonAdmin = null;
 
     if (isAdmin) {
-        boutonAdmin = <Bouton>Modifier</Bouton>;
+        boutonAdmin = <Button>Modifier</Button>;
     }
 
     return (
