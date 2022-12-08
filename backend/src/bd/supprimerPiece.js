@@ -7,7 +7,7 @@ export const supprimerPiece = (requete, reponse) => {
 
     utiliserDB(async (db) => {
         var objectId = ObjectId.createFromHexString(id);
-        const resultat = await db.collection('pieces').deleteOne({ _id: objectId });
+        const resultat = await db.collection('repertoire').deleteOne({ _id: objectId });
         
         reponse.status(200).send(`${resultat.deletedCount} pièce supprimée`);
     }, reponse).catch(

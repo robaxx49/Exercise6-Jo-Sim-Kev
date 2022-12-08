@@ -19,11 +19,11 @@ export const ListePieces = ({ pieces, estAdmin }) => {
             <>
                 {categories.map((categorie) => {
                     const piecesAssociees = pieces.filter((piece) => piece.categorie === categorie);
-                    return <PiecesDansCategorie 
-                                categorie={categorie} 
-                                pieces={piecesAssociees} 
-                                estAdmin={estAdmin}
-                            />
+                    return <PiecesDansCategorie
+                        categorie={categorie}
+                        pieces={piecesAssociees}
+                        estAdmin={estAdmin}
+                    />
                 })}
             </>
         );

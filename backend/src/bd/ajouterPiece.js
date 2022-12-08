@@ -5,7 +5,7 @@ export function ajouterPiece(requete, reponse) {
 
     if (validerParametres(titre, artiste, categorie) === true) {
         utiliserDB(async (db) => {
-            await db.collection('pieces').insertOne({titre, artiste, categorie});
+            await db.collection('repertoire').insertOne({titre, artiste, categorie});
             
             reponse.status(200).send("Pièce ajoutée");
         }, reponse).catch(
