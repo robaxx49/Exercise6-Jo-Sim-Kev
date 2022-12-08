@@ -1,6 +1,6 @@
 import { utiliserDB } from './connection';
 
-export function ajouterPiece(requete, reponse) {
+export function ajouterDemandeSpecial(requete, reponse) {
     const {nom, pieces} = requete.body;
 
     if (validerParametres(nom, pieces) === true) {
