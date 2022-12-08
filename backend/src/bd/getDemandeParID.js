@@ -2,7 +2,7 @@ import { ObjectId } from 'mongodb';
 
 import { utiliserDB } from './connection';
 
-export const getPiece = (requete, reponse) => {
+export const getDemandeParID = (requete, reponse) => {
     const id = requete.params.id;
 
     utiliserDB(async (db) => {
