@@ -32,7 +32,8 @@ export function ListagePieces({ isAdmin }) {
                                     <th>Titre</th>
                                     <th>Artiste</th>
                                     <th>Catégorie</th>
-                                    <th></th>
+                                    {boutonModifier == null ? null : <th></th>}
+                                    {boutonEffacer == null ? null : <th></th>}
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,8 +42,8 @@ export function ListagePieces({ isAdmin }) {
                                         <td>{u.titre}</td>
                                         <td>{u.artiste}</td>
                                         <td>{u.categorie}</td>
-                                        <td>{boutonModifier}</td>
-                                        <td>{boutonEffacer}</td>
+                                        {boutonModifier == null ? null : <td>{boutonModifier}</td>}
+                                        {boutonEffacer == null ? null : <td>{boutonEffacer}</td>}
                                     </tr>
                                 )}
                             </tbody>
