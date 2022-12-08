@@ -1,0 +1,106 @@
+[{
+  "_id": {
+    "$oid": "63909be2f480c708d3b1488f"
+  },
+  "titre": "My life",
+  "artiste": "DJ NoName",
+  "categorie": "Électronica"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14890"
+  },
+  "titre": "Growing Up",
+  "artiste": "A.L.E.X",
+  "categorie": "LoFi"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14891"
+  },
+  "titre": "Cities Of The Future",
+  "artiste": "Infected Mushroom",
+  "categorie": "Électronica"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14892"
+  },
+  "titre": "Gamma Goblins",
+  "artiste": "Infected Mushroom",
+  "categorie": "Électronica"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14893"
+  },
+  "titre": "Hard days",
+  "artiste": "Loupol",
+  "categorie": "Rock"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14894"
+  },
+  "titre": "Money",
+  "artiste": "Pink Floyd",
+  "categorie": "Rock"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14895"
+  },
+  "titre": "Betrayal",
+  "artiste": "Céline Dion",
+  "categorie": "Pop"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14896"
+  },
+  "titre": "Goes On",
+  "artiste": "Céline Dion",
+  "categorie": "Soft"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14897"
+  },
+  "titre": "Sad World",
+  "artiste": "Céline Dion",
+  "categorie": "Variété française"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14898"
+  },
+  "titre": "Red flowers",
+  "artiste": "Hipster2.0",
+  "categorie": "Emo"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b14899"
+  },
+  "titre": "Loser",
+  "artiste": "Hipster2.0",
+  "categorie": "Emo"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b1489a"
+  },
+  "titre": "Sunny",
+  "artiste": "The Good Band",
+  "categorie": "Pop"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b1489b"
+  },
+  "titre": "My Girl",
+  "artiste": "Motown",
+  "categorie": "Soul"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b1489c"
+  },
+  "titre": "Strawberry Letter 23",
+  "artiste": "The Brothers Johnson",
+  "categorie": "Soul"
+},{
+  "_id": {
+    "$oid": "63909be2f480c708d3b1489d"
+  },
+  "titre": "Stomp!",
+  "artiste": "The Brothers Johnson",
+  "categorie": "Soul"
+}]
