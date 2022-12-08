@@ -1,4 +1,4 @@
-import express, { application } from 'express';
+import express from 'express';
 import { MongoClient } from 'mongodb';
 import mongoose from 'mongoose';
 const { ObjectId } = mongoose.Types;
@@ -49,7 +49,6 @@ const utiliserDB = async (operations, res) => {
 // });
 
 //return all data
-
 app.get('/api/pieces', async (req, res) => {
 
     utiliserDB(async (db) => {
