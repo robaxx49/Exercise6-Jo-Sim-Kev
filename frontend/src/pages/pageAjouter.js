@@ -1,5 +1,5 @@
 import React from 'react';
-import FormulairePiece from '../FormulairePiece';
+import FormulairePiece from '../formulairePiece';
 import { Button } from 'react-bootstrap';
 
 

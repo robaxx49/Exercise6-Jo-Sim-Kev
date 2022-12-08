@@ -1,5 +1,5 @@
 import React from 'react';
-import FormulairePiece from '../FormulairePiece.js';
+import FormulairePiece from '../formulairePiece.js';
 import { Button } from 'react-bootstrap';
 
 export const PageModifier = ({ pieceAModifier }) => {
