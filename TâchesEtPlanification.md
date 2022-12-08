@@ -59,3 +59,14 @@
         - DELETE effacer pièce
             - Traitement + Validation ID
             - Supression de l'objet dans la BD
+
+## Liaisons Frontend-Backend
+
+- Composant Listage
+    - Get Liste des pièces
+    - Get pièce pour modification
+    - Get pièce pour suppression
+    - Delete id pour suppression
+- Composant Formulaire
+    - Post pièce pour ajout
+    - Put pièce pour modification
