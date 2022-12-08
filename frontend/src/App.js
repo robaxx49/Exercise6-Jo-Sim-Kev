@@ -28,7 +28,7 @@ function App() {
           <Route path="/modifier/:id" element={<PageModifier />} />
           <Route path="/supprimer/:id" element={<PageSupprimer />} />
           <Route path="*" element={<Page404 />} />
-        </Routes>        
+        </Routes>
       </Container>
     </BrowserRouter>
   );
