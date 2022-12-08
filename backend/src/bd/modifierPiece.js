@@ -9,7 +9,7 @@ export const modifierPiece = (requete, reponse) => {
     if (titre !== undefined && artiste !== undefined && categorie !== undefined) {
         utiliserDB(async (db) => {
             var objectId = ObjectId.createFromHexString(id);
-            await db.collection('pieces').updateOne({ _id: objectId }, {
+            await db.collection('repertoire').updateOne({ _id: objectId }, {
                 '$set': {
                     titre: titre,
                     artiste: artiste,

@@ -8,7 +8,7 @@ export const getPiece = (requete, reponse) => {
     utiliserDB(async (db) => {
         var objectId = ObjectId.createFromHexString(id);
 
-        const infoPiece = await db.collection('pieces').findOne({ _id: objectId });
+        const infoPiece = await db.collection('repertoire').findOne({ _id: objectId });
         
         reponse.status(200).json(infoPiece);      
     }, reponse).catch(
