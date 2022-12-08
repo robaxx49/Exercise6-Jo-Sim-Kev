@@ -1,12 +1,12 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import listagePieces from '../listagePieces';
+import ListagePieces from '../ListagePieces';
 
 
 export const PageAdministration = () =>{
     return(
         <>
-            <listagePieces isAdmin={true} />
+            <ListagePieces isAdmin={true} />
             <Button>Ajouter</Button>
         </>
     )

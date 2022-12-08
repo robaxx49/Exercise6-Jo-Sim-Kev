@@ -1,12 +1,12 @@
 import React from 'react';
-import formulairePieces from '../formulairePiece';
+import FormulairePiece from '../FormulairePiece';
 import { Button } from 'react-bootstrap';
 
 
 export const PageAjouter = () =>{
     return(
         <>
-            <formulairePieces />
+            <FormulairePiece />
             <Button>Ajouter</Button>
         </>
     )

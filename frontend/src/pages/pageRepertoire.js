@@ -1,10 +1,10 @@
 import React from 'react';
-
+import ListagePieces from '../ListagePieces';
 
 export const PageRepertoire = () =>{
     return(
         <>
-            <listagePieces isAdmin={false} />
+            <ListagePieces isAdmin={false} />
         </>
     )
 }
