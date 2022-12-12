@@ -1,106 +1,134 @@
 [{
   "_id": {
-    "$oid": "63909be2f480c708d3b1488f"
+    "$oid": "63973bcbdcb0ac948f9e2813"
   },
   "titre": "My life",
   "artiste": "DJ NoName",
-  "categorie": "Électronica"
+  "categorie": [
+    "Électronica"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14890"
+    "$oid": "63973bcbdcb0ac948f9e2814"
   },
   "titre": "Growing Up",
   "artiste": "A.L.E.X",
-  "categorie": "LoFi"
+  "categorie": [
+    "LoFi"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14891"
+    "$oid": "63973bcbdcb0ac948f9e2815"
   },
   "titre": "Cities Of The Future",
   "artiste": "Infected Mushroom",
-  "categorie": "Électronica"
+  "categorie": [
+    "Électronica"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14892"
+    "$oid": "63973bcbdcb0ac948f9e2816"
   },
   "titre": "Gamma Goblins",
   "artiste": "Infected Mushroom",
-  "categorie": "Électronica"
+  "categorie": [
+    "Électronica"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14893"
+    "$oid": "63973bcbdcb0ac948f9e2817"
   },
   "titre": "Hard days",
   "artiste": "Loupol",
-  "categorie": "Rock"
+  "categorie": [
+    "Rock"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14894"
+    "$oid": "63973bcbdcb0ac948f9e2818"
   },
   "titre": "Money",
   "artiste": "Pink Floyd",
-  "categorie": "Rock"
+  "categorie": [
+    "Rock"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14895"
+    "$oid": "63973bcbdcb0ac948f9e2819"
   },
   "titre": "Betrayal",
   "artiste": "Céline Dion",
-  "categorie": "Pop"
+  "categorie": [
+    "Pop"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14896"
+    "$oid": "63973bcbdcb0ac948f9e281a"
   },
   "titre": "Goes On",
   "artiste": "Céline Dion",
-  "categorie": "Soft"
+  "categorie": [
+    "Soft"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14897"
+    "$oid": "63973bcbdcb0ac948f9e281b"
   },
   "titre": "Sad World",
   "artiste": "Céline Dion",
-  "categorie": "Variété française"
+  "categorie": [
+    "Variété française"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14898"
+    "$oid": "63973bcbdcb0ac948f9e281c"
   },
   "titre": "Red flowers",
   "artiste": "Hipster2.0",
-  "categorie": "Emo"
+  "categorie": [
+    "Emo"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b14899"
+    "$oid": "63973bcbdcb0ac948f9e281d"
   },
   "titre": "Loser",
   "artiste": "Hipster2.0",
-  "categorie": "Emo"
+  "categorie": [
+    "Emo"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b1489a"
+    "$oid": "63973bcbdcb0ac948f9e281e"
   },
   "titre": "Sunny",
   "artiste": "The Good Band",
-  "categorie": "Pop"
+  "categorie": [
+    "Pop"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b1489b"
+    "$oid": "63973bcbdcb0ac948f9e281f"
   },
   "titre": "My Girl",
   "artiste": "Motown",
   "categorie": "Soul"
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b1489c"
+    "$oid": "63973bcbdcb0ac948f9e2820"
   },
   "titre": "Strawberry Letter 23",
   "artiste": "The Brothers Johnson",
-  "categorie": "Soul"
+  "categorie": [
+    "Soul"
+  ]
 },{
   "_id": {
-    "$oid": "63909be2f480c708d3b1489d"
+    "$oid": "63973bcbdcb0ac948f9e2821"
   },
   "titre": "Stomp!",
   "artiste": "The Brothers Johnson",
-  "categorie": "Soul"
+  "categorie": [
+    "Soul"
+  ]
 }]
