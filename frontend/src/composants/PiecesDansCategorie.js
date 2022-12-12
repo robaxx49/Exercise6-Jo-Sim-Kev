@@ -21,7 +21,7 @@ export const PiecesDansCategorie = ({ categorie, pieces, estAdmin, pourDemandes,
                                 </> : undefined}
                             {pourDemandes === true ?
                                 <>
-                                    <Button variant="success" className="m-1" size="sm" onclick={ajouterDemande(piece.titre, piece.artiste)}>Ajouter</Button>
+                                    <Button variant="success" className="m-1" size="sm" onclick={() => ajouterDemande(piece.titre, piece.artiste)}>Ajouter</Button>
                                 </> : undefined}
                         </li>
                     )
