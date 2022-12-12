@@ -3,7 +3,7 @@ import { Row, Col, Button, Form } from 'react-bootstrap';
 
 
 import { ListePieces } from '../composants/ListePieces';
-import { ListeDemandes } from '../composants/ListeDemandes';
+import ContenuDemande from '../composants/ContenuDemande';
 
 export const PageCreerDemande = () => {
     const [listePieces, setListePieces] = useState([]);
@@ -78,7 +78,7 @@ export const PageCreerDemande = () => {
                         <span className='text-danger'> * Il n'y a pas de pièces dans la liste.</span>
                         : undefined
                     }
-                    <ListeDemandes demandes={listeDemandes} />
+                    <ContenuDemande demande={listeDemandes} />
                 </Col>
             </Row>
 

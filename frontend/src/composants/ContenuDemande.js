@@ -1,8 +1,16 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 
-export function ContenuDemande()
+export const ContenuDemande = ({demande}) =>
 {
-    ;
+    return (
+        <>
+            <ul>
+                {demande.map(demande => 
+                    <li key={demande}>{demande}</li>
+                )}
+            </ul>
+        </>
+    )
 }
 
 export default ContenuDemande;

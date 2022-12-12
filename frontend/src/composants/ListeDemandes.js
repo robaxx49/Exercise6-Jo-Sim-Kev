@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 
 export const ListeDemandes = ({demandes}) =>
 {
@@ -6,7 +6,12 @@ export const ListeDemandes = ({demandes}) =>
         <>
             <ul>
                 {demandes.map(demande => 
-                    <li key={demande}>{demande}</li>
+                    <li key={demande._id}>{demande.nom}
+                        <ul>{demande.pieces.map(piece =>
+                                <li key={piece}>{piece}</li>
+                            )}
+                        </ul>
+                    </li>
                 )}
             </ul>
         </>
