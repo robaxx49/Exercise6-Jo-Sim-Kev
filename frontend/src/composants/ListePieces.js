@@ -16,8 +16,6 @@ export const ListePieces = ({ pieces, estAdmin, pourDemandes, ajouterDemande }) 
         });
 
         const categories = Object.keys(dictionnaireCategories);
-        console.log(categories);
-
         return (
             <>
                 {categories.map((categorie) => {
