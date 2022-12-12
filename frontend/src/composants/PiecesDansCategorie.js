@@ -2,7 +2,7 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
-export const PiecesDansCategorie = ({ categorie, pieces, estAdmin, pourDemande, ajouterDemande }) => {
+export const PiecesDansCategorie = ({ categorie, pieces, estAdmin, pourDemandes, ajouterDemande }) => {
     return (
         <div key={categorie}>
             <h4>{categorie}</h4>
@@ -19,7 +19,7 @@ export const PiecesDansCategorie = ({ categorie, pieces, estAdmin, pourDemande, 
                                     <Button variant="danger" className="m-1" size="sm" >Supprimer</Button>
                                 </Link>
                             </> : undefined }     
-                            {pourDemande === true ? 
+                        {pourDemandes === true ? 
                             <>    
                                 <Button variant="success" className="m-1" size="sm" onclick={ajouterDemande(piece.titre, piece.artiste)}>Ajouter</Button>
                             </> : undefined }                                  
