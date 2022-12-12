@@ -23,7 +23,7 @@ export const ListePieces = ({ pieces, estAdmin, pourDemandes, ajouterDemande }) 
                         categorie={categorie}
                         pieces={piecesAssociees}
                         estAdmin={estAdmin}
-                        pourDemandes={pourDemande}
+                        pourDemandes={pourDemandes}
                         ajouterDemande={ajouterDemande}
                     />
                 })}
