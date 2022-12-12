@@ -1,11 +1,11 @@
 import { React, useState, useEffect } from 'react';
-import { Row, Col, Button } from 'react/bootstrap';
+import { Row, Col, Button, Form } from 'react-bootstrap';
 
-import ListePieces from '../composants/ListePieces';
-import ListeDemandes from '../composants/ListeDemandes';
 
-export const PageCreerDemande = () =>
-{
+import { ListePieces } from '../composants/ListePieces';
+import { ListeDemandes } from '../composants/ListeDemandes';
+
+export const PageCreerDemande = () => {
     const [listePieces, setListePieces] = useState([]);
     const [nomClient, setNomClient] = useState("");
 
@@ -17,32 +17,27 @@ export const PageCreerDemande = () =>
     useEffect(() => {
         const chercherDonnees = async () => {
             const resultat = await fetch(`/api/pieces`);
-            const body = await resultat.json().catch((error) => {console.log(error)});
+            const body = await resultat.json().catch((error) => { console.log(error) });
             setListePieces(body);
         };
         chercherDonnees();
     }, []);
 
-    const ajouterDemande = (titre, artiste) =>
-    {
+    const ajouterDemande = (titre, artiste) => {
         let string = `${titre} - ${artiste}`;
-        if (listeDemandes.includes(string))
-        {
-            Alert("Cette pièce est déjà inclue dans la liste!")
+        if (listeDemandes.includes(string)) {
+            alert("Cette pièce est déjà inclue dans la liste!")
         }
-        else
-        {
+        else {
             listeDemandes.push(`${titre} - ${artiste}`);
         }
     }
 
-    const validerFormulaire = () =>
-    {
+    const validerFormulaire = () => {
         setNomEstPresent(nomClient !== "");
         setListeExiste(listeDemandes.length > 0);
 
-        if(nomClient !== "" && listeDemandes.length > 0)
-        {
+        if (nomClient !== "" && listeDemandes.length > 0) {
             envoyerFormulaire();
         }
     }
@@ -72,21 +67,21 @@ export const PageCreerDemande = () =>
                         onChange={(event) => setNomClient(event.target.value)} />
                 </Form.Group>
             </Form>
-            
+
             <Row>
                 <Col>
                     <ListePieces pieces={listePieces} pourDemandes={true} ajouterDemande={ajouterDemande} />
                 </Col>
                 <Col>
-                    {listeExiste === false ? 
+                    {listeExiste === false ?
                         <span className='text-danger'> * Il n'y a pas de pièces dans la liste.</span>
                         : undefined
                     }
                     <ListeDemandes demandes={listeDemandes} />
                 </Col>
-            </Row> 
+            </Row>
 
-            <Button className="mt-2" variant="primary" onClick={validerFormulaire}>Créer la demande</Button>     
+            <Button className="mt-2" variant="primary" onClick={validerFormulaire}>Créer la demande</Button>
         </>
     )
 }
