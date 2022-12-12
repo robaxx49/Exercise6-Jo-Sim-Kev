@@ -29,8 +29,10 @@ export const PageCreerDemande = () => {
         {
             alert("Cette pièce est déjà inclue dans la liste!")
         }
-        else {
+        else 
+        {
             listeDemandes.push(`${titre} - ${artiste}`);
+            console.log(listeDemandes);
         }
     }
 
