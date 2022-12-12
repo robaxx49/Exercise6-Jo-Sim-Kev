@@ -15,7 +15,7 @@ export function ajouterDemandeSpecial(requete, reponse) {
     else {
         reponse.status(500).send(`Certains paramètres ne sont pas définis :
             - nom: ${nom}
-            - artiste: ${pieces}`);
+            - pieces: ${pieces}`);
     }
 }
 
