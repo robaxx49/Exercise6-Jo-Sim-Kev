@@ -4,11 +4,16 @@ export const getDemande = (requete, reponse) => {
     
 
     utiliserDB(async (db) => {
+        try{
+            
+        const infoDemandes = await db.collection('demande-special').find().toArray();
         
-        const infoDemandes = await db.collection('demande-special').find().ToArray();
+        reponse.status(200).json(infoDemandes); 
         
-        reponse.status(200).json(infoDemandes);      
-    }, reponse).catch(
-        () => reponse.status(500).send("Aucune demande special en memoire")
-    );
+        }
+        catch(erreur){
+            reponse.status(500).send("Aucune demande special en memoire");
+        }  
+          
+    }, reponse)
 };
