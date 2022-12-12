@@ -22,6 +22,9 @@ export const PageRepertoire = () => {
         <>
             <h1>Liste du répertoire</h1>
             <ListePieces pieces={listePieces} />
+            <Link to="/creerDemande">
+                <Button>Ajouter une nouvelle pièce</Button>    
+            </Link>
         </>
     );
 }

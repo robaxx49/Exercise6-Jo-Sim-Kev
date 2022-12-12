@@ -3,7 +3,7 @@ import Alert from 'react-bootstrap/Alert'
 
 import { PiecesDansCategorie } from './PiecesDansCategorie.js';
 
-export const ListePieces = ({ pieces, estAdmin }) => {
+export const ListePieces = ({ pieces, estAdmin, pourDemande, ajouterDemande }) => {
     if (pieces?.length) {
         var dictionnaireCategories = Object();
 
@@ -23,6 +23,8 @@ export const ListePieces = ({ pieces, estAdmin }) => {
                         categorie={categorie}
                         pieces={piecesAssociees}
                         estAdmin={estAdmin}
+                        pourDemande={pourDemande}
+                        ajouterDemande={ajouterDemande}
                     />
                 })}
             </>

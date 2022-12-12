@@ -14,6 +14,8 @@ import { PageModifier } from './pages/PageModifier';
 import { PageRepertoire } from './pages/PageRepertoire';
 import { PageSupprimer } from './pages/PageSupprimer';
 import { Page404 } from './pages/Page404';
+import PageCreerDemande from './pages/PageCreerDemande';
+import PageAfficherDemande from './pages/PageAfficherDemande';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/ajouter" element={<PageAjouter />} />
           <Route path="/modifier/:id" element={<PageModifier />} />
           <Route path="/supprimer/:id" element={<PageSupprimer />} />
+          <Route path="/creerDemande" element={<PageCreerDemande />} />
+          <Route path="/afficherDemande" element={<PageAfficherDemande />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </Container>

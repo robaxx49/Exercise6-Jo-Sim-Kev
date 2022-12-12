@@ -27,6 +27,10 @@ export const PageAdmin = () => {
             <Link to="/ajouter">
                 <Button>Ajouter une nouvelle pièce</Button>    
             </Link>
+
+            <Link to="/afficherDemande">
+                <Button>Afficher demandes</Button>    
+            </Link>
             
             <h2>Liste du répertoire</h2>
             <ListePieces pieces={listePieces} estAdmin={true} />
