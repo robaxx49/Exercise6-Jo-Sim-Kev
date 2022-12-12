@@ -1,7 +1,7 @@
 // ******************** ajout de toutes les données dans la base de données ********************
 import { utiliserDB } from './connection';
 
-export const repertoire = [
+const repertoire = [
     { "titre": "My life", "artiste": "DJ NoName", "categorie": ["Électronica"] },
     { "titre": "Growing Up", "artiste": "A.L.E.X", "categorie": ["LoFi"] },
     { "titre": "Cities Of The Future", "artiste": "Infected Mushroom", "categorie": ["Électronica"] },
@@ -17,12 +17,11 @@ export const repertoire = [
     { "titre": "My Girl", "artiste": "Motown", "categorie": "Soul" },
     { "titre": "Strawberry Letter 23", "artiste": "The Brothers Johnson", "categorie": ["Soul"] },
     { "titre": "Stomp!", "artiste": "The Brothers Johnson", "categorie": ["Soul"] }
-  ]
+]
 
-app.post('/api/repertoire', async (req, res) => {
+export const ajouterPieces = (requete, reponse) => {
     utiliserDB(async (db) => {
         await db.collection('repertoire').insertMany(repertoire);
-        res.status(200).send();
-    }, res);
-});
-
+        reponse.status(200).send();
+    }, reponse);
+};

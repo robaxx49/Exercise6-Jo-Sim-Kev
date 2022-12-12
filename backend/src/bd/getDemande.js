@@ -1,7 +1,6 @@
 import { utiliserDB } from './connection';
 
-export const getDemande = (requete, reponse) => {
-    
+export const getDemande = (requete, reponse) => {   
 
     utiliserDB(async (db) => {
         try{
