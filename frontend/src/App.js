@@ -14,8 +14,8 @@ import { PageModifier } from './pages/PageModifier';
 import { PageRepertoire } from './pages/PageRepertoire';
 import { PageSupprimer } from './pages/PageSupprimer';
 import { Page404 } from './pages/Page404';
-import PageCreerDemande from './pages/PageCreerDemande';
-import PageAfficherDemande from './pages/PageAfficherDemande';
+import { PageCreerDemande } from './pages/PageCreerDemande';
+import { PageAfficherDemande } from './pages/PageAfficherDemande';
 
 function App() {
   return (
