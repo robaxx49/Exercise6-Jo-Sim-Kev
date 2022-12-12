@@ -6,7 +6,7 @@ import Image from './image/logo.png';
 
 export const BarreNavigation = () => {
     return (
-        <Navbar bg="light" expand="sm">
+        <Navbar bg="primary" variant="dark" >
             <Container>
             <Navbar.Brand href="/"> <img src={Image} alt="logo"
           width="30"
