@@ -9,19 +9,19 @@ export const ListePieces = ({ pieces, estAdmin, pourDemandes, ajouterDemande }) 
 
         pieces.forEach(piece => {
             piece.categorie.forEach(categorie => {
-                if (dictionnaireCategories[categorie] === undefined)
-                {
+                if (dictionnaireCategories[categorie] === undefined) {
                     dictionnaireCategories[categorie] = true;
                 }
             });
         });
 
         const categories = Object.keys(dictionnaireCategories);
+        console.log(categories);
 
         return (
             <>
                 {categories.map((categorie) => {
-                    const piecesAssociees = pieces.filter((piece) => piece.categorie === categorie);
+                    const piecesAssociees = pieces.filter((piece) => piece.categorie.find(cat => cat === categorie));
                     return <PiecesDansCategorie
                         categorie={categorie}
                         pieces={piecesAssociees}
