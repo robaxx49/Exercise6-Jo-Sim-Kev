@@ -8,9 +8,12 @@ export const ListePieces = ({ pieces, estAdmin, pourDemandes, ajouterDemande }) 
         var dictionnaireCategories = Object();
 
         pieces.forEach(piece => {
-            if (dictionnaireCategories[piece.categorie] === undefined) {
-                dictionnaireCategories[piece.categorie] = true;
-            }
+            piece.categorie.forEach(categorie => {
+                if (dictionnaireCategories[categorie] === undefined)
+                {
+                    dictionnaireCategories[categorie] = true;
+                }
+            });
         });
 
         const categories = Object.keys(dictionnaireCategories);
