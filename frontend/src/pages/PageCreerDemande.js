@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react';
-import { Row, Col, Button } from 'react/bootstrap';
+import { Row, Col, Button, Form } from 'react-bootstrap';
 
 import ListePieces from '../composants/ListePieces';
 import ListeDemandes from '../composants/ListeDemandes';
@@ -28,7 +28,7 @@ export const PageCreerDemande = () =>
         let string = `${titre} - ${artiste}`;
         if (listeDemandes.includes(string))
         {
-            Alert("Cette pièce est déjà inclue dans la liste!")
+            alert("Cette pièce est déjà inclue dans la liste!")
         }
         else
         {

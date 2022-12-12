@@ -34,3 +34,5 @@ export const ListePieces = ({ pieces, estAdmin, pourDemande, ajouterDemande }) =
         return <Alert variant={"info"} >Il n'y a pas de pièces dans le répertoire.</Alert>;
     }
 }
+
+export default ListePieces;
