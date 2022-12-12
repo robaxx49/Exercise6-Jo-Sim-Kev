@@ -32,7 +32,6 @@ export const PageCreerDemande = () => {
         else 
         {
             listeDemandes.push(`${titre} - ${artiste}`);
-            console.log(listeDemandes);
         }
     }
 
@@ -46,6 +45,7 @@ export const PageCreerDemande = () => {
     }
 
     const envoyerFormulaire = async () => {
+        console.log("Entrée dans fetch");
         await fetch(`/api/demandes/ajouter`, {
             method: 'post',
             body: JSON.stringify({ nomClient, listeDemandes }),
