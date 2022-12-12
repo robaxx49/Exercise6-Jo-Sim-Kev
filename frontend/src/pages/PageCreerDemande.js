@@ -6,8 +6,8 @@ import { ListePieces } from '../composants/ListePieces';
 import ContenuDemande from '../composants/ContenuDemande';
 
 export const PageCreerDemande = () => {
-    const [listePieces, setListePieces] = useState([]);
-    const [nomClient, setNomClient] = useState("");
+    const [pieces, setPieces] = useState([]);
+    const [nom, setNom] = useState("");
 
     const [nomEstPresent, setNomEstPresent] = useState(true);
     const [listeExiste, setListeExiste] = useState(true);
@@ -18,7 +18,7 @@ export const PageCreerDemande = () => {
         const chercherDonnees = async () => {
             const resultat = await fetch(`/api/pieces`);
             const body = await resultat.json().catch((error) => { console.log(error) });
-            setListePieces(body);
+            setPieces(body);
         };
         chercherDonnees();
     }, []);
@@ -29,24 +29,26 @@ export const PageCreerDemande = () => {
         {
             alert("Cette pièce est déjà inclue dans la liste!")
         }
-        else {
+        else 
+        {
             listeDemandes.push(`${titre} - ${artiste}`);
         }
     }
 
     const validerFormulaire = () => {
-        setNomEstPresent(nomClient !== "");
+        setNomEstPresent(nom !== "");
         setListeExiste(listeDemandes.length > 0);
 
-        if (nomClient !== "" && listeDemandes.length > 0) {
+        if (nom !== "" && listeDemandes.length > 0) {
             envoyerFormulaire();
         }
     }
 
     const envoyerFormulaire = async () => {
+        console.log("Entrée dans fetch");
         await fetch(`/api/demandes/ajouter`, {
             method: 'post',
-            body: JSON.stringify({ nomClient, listeDemandes }),
+            body: JSON.stringify({ nom, pieces }),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -64,14 +66,14 @@ export const PageCreerDemande = () => {
                             <span className="text-danger"> * Vous devez entrer un nom.</span>
                             : undefined
                         }</Form.Label>
-                    <Form.Control type="text" value={nomClient} id="inputClient"
-                        onChange={(event) => setNomClient(event.target.value)} />
+                    <Form.Control type="text" value={nom} id="inputClient"
+                        onChange={(event) => setNom(event.target.value)} />
                 </Form.Group>
             </Form>
 
             <Row>
                 <Col>
-                    <ListePieces pieces={listePieces} pourDemandes={true} ajouterDemande={ajouterDemande} />
+                    <ListePieces pieces={pieces} pourDemandes={true} ajouterDemande={ajouterDemande} />
                 </Col>
                 <Col>
                     {listeExiste === false ?
